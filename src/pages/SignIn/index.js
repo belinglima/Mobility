@@ -23,8 +23,8 @@ class SignIn extends Component {
     } else {
       try {
         const response = await api.post("/auth", { email, password });
-        
-        login(response.data.token);
+        console.log(response.data.access_token);
+        login(response.data.access_token);
         this.props.history.push("/app");
       } catch (err) {
         this.setState({
@@ -53,7 +53,7 @@ class SignIn extends Component {
           />
           <button type="submit">ENTRAR</button>
           <hr />
-          <Link to="/signup">Registre-Se</Link>
+          <Link to="/signup">REGISTRE-SE</Link>
         </Form>
       </Container>
     );

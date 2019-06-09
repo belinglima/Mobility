@@ -1,13 +1,17 @@
 import { createGlobalStyle } from "styled-components";
+
 import "font-awesome/css/font-awesome.css";
 
-createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: 0;
+  outline: none;
+  overflow: hidden;
+  font-family: sans-serif;
 }
+
 body, html {
   background: #eee;
   font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
@@ -18,4 +22,4 @@ body, html {
 }
 `;
 
-export default createGlobalStyle;
+export default GlobalStyle;

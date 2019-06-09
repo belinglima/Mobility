@@ -45,9 +45,9 @@ export const Form = styled.form`
   button {
     color: #018f46;
     font-size: 16px;
-    font-style: bold;
     background: #ffd301;
-    height: 56px;
+    height: 46px;
+
     border: 0;
     border-radius: 52px;
     width: 100%;
@@ -60,7 +60,6 @@ export const Form = styled.form`
   }
   a {
     font-size: 16;
-    font-weight: bold;
     color: #018f46;
     text-decoration: none;
   }

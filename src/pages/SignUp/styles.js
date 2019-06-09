@@ -32,7 +32,7 @@ export const Form = styled.form`
     margin-bottom: 15px;
     padding: 10px 20px;
     border-radius: 52px; 
-    color: #777;
+    color: #00a651;
     font-size: 15px;
     width: 100%;
     border: 1px solid #ddd;
@@ -41,9 +41,9 @@ export const Form = styled.form`
     }
   }
   button {
-    color: #fff;
+    color: #018f46;
     font-size: 16px;
-    background: #fc6000;
+    background: #ffd301;
     height: 56px;
     border: 0;
     border-radius: 5px;
@@ -58,7 +58,7 @@ export const Form = styled.form`
   a {
     font-size: 16;
     font-weight: bold;
-    color: #999;
+    color: #018f46;
     text-decoration: none;
   }
 `;

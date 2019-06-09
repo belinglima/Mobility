@@ -24,7 +24,7 @@ class SignUp extends Component {
     } else {
       try {
         await api.post("api/user", { username, fullname, email, password, cpf, phone  });
-        this.setState({sucess: "Usuario Cadastrado com sucesso!"});
+        // {alert(this.state.sucess)}
         await this.props.history.push("/app");
       } catch (err) {
         console.log(err);
@@ -39,7 +39,6 @@ class SignUp extends Component {
         <Form onSubmit={this.handleSignUp}>
           <img src={Logo} alt="Cityzen logo" />
           {this.state.error && <p>{this.state.error}</p>}
-          alert(this.state.sucess);
           <input
             type="text"
             placeholder="Nome de usuário"
