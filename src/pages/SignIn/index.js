@@ -16,12 +16,14 @@ class SignIn extends Component {
 
   handleSignIn = async e => {
     e.preventDefault();
+    
     const { email, password } = this.state;
     if (!email || !password) {
       this.setState({ error: "Preencha e-mail e senha para continuar!" });
     } else {
       try {
         const response = await api.post("/auth", { email, password });
+        
         login(response.data.token);
         this.props.history.push("/app");
       } catch (err) {
@@ -49,7 +51,7 @@ class SignIn extends Component {
             placeholder="Senha"
             onChange={e => this.setState({ password: e.target.value })}
           />
-          <button type="submit">Entrar</button>
+          <button type="submit">ENTRAR</button>
           <hr />
           <Link to="/signup">Registre-Se</Link>
         </Form>

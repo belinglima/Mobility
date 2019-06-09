@@ -12,18 +12,20 @@ class SignUp extends Component {
     pass: "",
     cpf: "",
     fone: "",
-    error: ""
+    error: "",
+    sucess: "Cadastrado com sucesso"
   };
 
   handleSignUp = async e => {
     e.preventDefault();
-    const { username, fullname, email, pass, cpf, fone } = this.state;
-    if (!username || !fullname || !email || !pass ||  !cpf || !fone) {
+    const { username, fullname, email, password, cpf, phone } = this.state;
+    if (!username || !fullname || !email || !password ||  !cpf || !phone) {
       this.setState({ error: "Preencha todos os dados para se cadastrar" });
     } else {
       try {
-        await api.post("/user", { username, fullname, email, pass, cpf, fone  });
-        this.props.history.push("/");
+        await api.post("api/user", { username, fullname, email, password, cpf, phone  });
+        this.setState({sucess: "Usuario Cadastrado com sucesso!"});
+        await this.props.history.push("/app");
       } catch (err) {
         console.log(err);
         this.setState({ error: "Ocorreu um erro ao registrar" });
@@ -37,6 +39,7 @@ class SignUp extends Component {
         <Form onSubmit={this.handleSignUp}>
           <img src={Logo} alt="Cityzen logo" />
           {this.state.error && <p>{this.state.error}</p>}
+          alert(this.state.sucess);
           <input
             type="text"
             placeholder="Nome de usuário"
@@ -60,12 +63,12 @@ class SignUp extends Component {
           <input
             type="password"
             placeholder="Senha"
-            onChange={e => this.setState({ pass: e.target.value })}
+            onChange={e => this.setState({ password: e.target.value })}
           />
           <input
             type="text"
             placeholder="fone"
-            onChange={e => this.setState({ fone: e.target.value })}
+            onChange={e => this.setState({ phone: e.target.value })}
           />
           <button type="submit">Registre-se</button>
           <hr />

@@ -17,8 +17,8 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   img {
-    width: 100px;
-    margin: 10px 0 40px;
+    width: 300px;
+    margin: 5px 0 30px;
   }
   p {
     color: #fc6000;
@@ -30,25 +30,26 @@ export const Form = styled.form`
   }
   input {
     flex: 1;
-    padding: 30px 0;
-    margin-bottom: 15px;
+    padding: 20px 0;
+    margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 52px; 
-    color: #777;
+    color: #00a651;
     font-size: 15px;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #018f46;
     &::placeholder {
-      color: #999;
+      color: #00a651;
     }
   }
   button {
-    color: #fff;
+    color: #018f46;
     font-size: 16px;
-    background: #fc6000;
+    font-style: bold;
+    background: #ffd301;
     height: 56px;
     border: 0;
-    border-radius: 5px;
+    border-radius: 52px;
     width: 100%;
   }
   hr {
@@ -60,7 +61,7 @@ export const Form = styled.form`
   a {
     font-size: 16;
     font-weight: bold;
-    color: #999;
+    color: #018f46;
     text-decoration: none;
   }
 `;

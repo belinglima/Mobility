@@ -9,6 +9,7 @@ api.interceptors.request.use(async config => {
   const token = getToken();
   if (token) {
     config.headers.Authorization = `JWT ${token}`;
+    // config.headers.Authorization = `Access-Control-Allow-Origin, "*"`;
   }
   return config;
 });

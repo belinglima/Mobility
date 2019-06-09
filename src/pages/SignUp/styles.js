@@ -15,7 +15,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   img {
-    width: 100px;
+    width: 200px;
     margin: 10px 0 40px;
   }
   p {
@@ -28,7 +28,7 @@ export const Form = styled.form`
   }
   input {
     flex: 1;
-    padding: 30px 0;
+    padding: 10px 0;
     margin-bottom: 15px;
     padding: 10px 20px;
     border-radius: 52px; 
