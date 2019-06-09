@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 import "font-awesome/css/font-awesome.css";
 
 createGlobalStyle`
@@ -18,3 +17,5 @@ body, html {
   width: 100%;
 }
 `;
+
+export default createGlobalStyle;

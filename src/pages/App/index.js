@@ -10,7 +10,7 @@ import { logout } from "../../services/auth";
 
 import Button from "./Button";
 
-import { Container, ButtonContainer } from "./styles";
+import { Container, ButtonContainer, ButtonContainer2 } from "./styles";
 
 const TOKEN =
   "pk.eyJ1IjoiYmVsaW5nbGltYSIsImEiOiJjandvajh0cTkwcHB0NGJuMzg5bDQ2OTduIn0.RzPhYdL09PPWYcoX38o8FQ";
@@ -68,12 +68,19 @@ class Map extends Component {
 
   renderActions() {
     return (
+      <>
+      <ButtonContainer2>
+      <Button color="#222" onClick={this.handleLogout}>
+        <i className="fa fa-plus" />
+      </Button>
+    </ButtonContainer2>
       <ButtonContainer>
         <Button color="#222" onClick={this.handleLogout}>
         Logout
           <i className="fa fa-times" />
         </Button>
       </ButtonContainer>
+      </>
     );
   }
 

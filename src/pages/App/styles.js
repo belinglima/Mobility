@@ -14,3 +14,11 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const ButtonContainer2 = styled.div`
+  position: absolute;
+  bottom: 100px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+`;

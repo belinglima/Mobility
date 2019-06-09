@@ -1,6 +1,15 @@
-import React from "react";
-import Routes from "./routes";
-import "./styles/global";
 
-const App = () => <Routes />;
+import React from 'react';
+import Global from './styles/global'
+import Routes from './routes';
+
+function App() {
+    return (
+    <>
+        <Routes />
+        <Global />
+    </>
+);
+}
+
 export default App;
